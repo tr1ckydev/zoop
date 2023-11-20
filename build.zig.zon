@@ -2,6 +2,8 @@
     .name = "zoop",
     .version = "1.0.0",
     .paths = .{
+        "build.zig",
+        "build.zig.zon",
         "src/benchmark.zig",
         "src/cpu_name.zig",
         "src/fmt_u32.zig",
