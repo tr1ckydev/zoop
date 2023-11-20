@@ -24,8 +24,8 @@ To install zoop in your own project,
    ```zig
    .dependencies = .{
        .zoop = .{
-           .url = "",
-           .hash = "",
+           .url = "https://github.com/tr1ckydev/zoop/archive/0ce2e985206e28fe13ed3c6dcb6b88650688238e.tar.gz",
+           .hash = "1220bad2ffae51552957e6255289dd452ee1a5e687d9f4c8c9427008edb0a802d874",
        },
    },
    ```
