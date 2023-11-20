@@ -1,0 +1,15 @@
+.{
+    .name = "zoop",
+    .version = "1.0.0",
+    .paths = .{
+        "src/benchmark.zig",
+        "src/cpu_name.zig",
+        "src/fmt_u32.zig",
+    },
+    .dependencies = .{
+        .chameleon = .{
+            .url = "https://github.com/tr1ckydev/chameleon/archive/3d7fdd61598edecacd2c53c5ecff76a79abb8661.tar.gz",
+            .hash = "1220018d65a2105db410846019d23fd9966ace9f5cacc2fdec5c1ad4275009b94b70",
+        },
+    },
+}
