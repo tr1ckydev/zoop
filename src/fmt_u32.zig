@@ -10,10 +10,16 @@ fn formatIntu32(float: f32, comptime fmt: []const u8, options: std.fmt.FormatOpt
         .{ 'G', 1_000_000_000 },
         .{ 'M', 1_000_000 },
         .{ 'k', 1_000 },
+        .{ null, 1 },
     }) |pair| {
-        const suffix, const val = pair;
-        if (float >= val) {
-            try buf_writer.print("{d:.3}{c}", .{ float / val, suffix });
+        const suffix: ?u8, const val = pair;
+        if (suffix) |s| {
+            if (float >= val) {
+                try buf_writer.print("{d:.3}{c}", .{ float / val, s });
+                break;
+            }
+        } else {
+            try buf_writer.print("{d}", .{float});
             break;
         }
     }
